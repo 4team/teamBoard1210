@@ -5,14 +5,20 @@
 
 <%@include file="../include/header.jsp"%>
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
-
-
+<table class="type06">
+    <tr>
+        <th scope="row">항목명</th>
+        <td>내용이 들어갑니다.</td>
+    </tr>
+    <tr>
+        <th scope="row" class="even">항목명</th>
+        <td class="even">내용이 들어갑니다.</td>
+    </tr>
+    <tr>
+        <th scope="row">항목명</th>
+        <td>내용이 들어갑니다.</td>
+    </tr>
+</table>
 
 <%@include file="../include/footer.jsp"%>
 </body>
