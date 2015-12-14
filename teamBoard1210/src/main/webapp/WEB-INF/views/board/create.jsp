@@ -6,7 +6,7 @@
 <%@include file="../include/header.jsp"%>
 <title>등록 화면</title>
 <div class="content-wrapper" style="padding: 100px">
-	<!-- <form method="post"> -->
+	<form method="post">
 	<div align="center">
 		<label>Title</label>
 		 <input type="text" name="title">
@@ -21,7 +21,7 @@
 	</div>
 
 	<input type="submit" value="저장">
-	<!-- </form> -->
+	</form>
 
 	<form action="/board/list">
 		<input type="submit" value="취소">
