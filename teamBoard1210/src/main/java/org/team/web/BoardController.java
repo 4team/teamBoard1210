@@ -3,6 +3,7 @@ package org.team.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,7 +32,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/view",method = RequestMethod.GET)
-	public void view(@RequestParam("bno")int bno, Model model) throws Exception{
+	public void view(@ModelAttribute("cri")Criteria cri,@RequestParam("bno")int bno, Model model) throws Exception{
 		System.out.println("Board Controller - View GET이 호출되었다.");
 		model.addAttribute("view",service.read(bno));
 	}
@@ -63,8 +64,8 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/list", method=RequestMethod.GET)
-	public void list(Model model) throws Exception{
-		model.addAttribute("list",service.list());
+	public void list(@ModelAttribute("cri")Criteria cri,Model model) throws Exception{
+		model.addAttribute("list",service.list(cri));
 	}
 	
 }
