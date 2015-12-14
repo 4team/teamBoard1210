@@ -4,19 +4,24 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <%@include file="../include/header.jsp"%>
+<title>조회 화면</title>
+<div class="content-wrapper" style="padding:100px">
 
+<table>
+<tr>
+<th>Title</th>
+<th>Writer</th>
+<th>Content</th>
+</tr>
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
-</head>
-<body>
+<tr>
+<td>${view.title}</td>
+<td>${view.writer}</td>
+<td>${view.content}</td>
+</tr>
+</table>
 
-
-
-
-
+</div>
 <%@include file="../include/footer.jsp"%>
 </body>
 </html>
